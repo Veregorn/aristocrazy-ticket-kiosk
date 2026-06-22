@@ -1,0 +1,22 @@
+[Unit]
+Description=Kiosko de tickets Aristocrazy
+# Arranca cuando el sistema ya está operativo (red, USB, etc.)
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/rjbarco
+# Pequeña espera para que el USB y la impresora terminen de enumerarse tras el arranque
+ExecStartPre=/bin/sleep 8
+ExecStart=/usr/bin/python3 /home/rjbarco/kiosko.py
+# Si el script se cierra por cualquier motivo, se vuelve a lanzar solo
+Restart=always
+RestartSec=5
+# Fuerza el backend de GPIO correcto (lgpio) por si acaso
+Environment=GPIOZERO_PIN_FACTORY=lgpio
+# Sin buffer: que los mensajes (print) aparezcan en el journal en tiempo real
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

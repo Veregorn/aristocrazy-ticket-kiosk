@@ -1,0 +1,122 @@
+<svg viewBox="0 0 1020 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tt dd" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="tt">Conexiones finales del kiosko (montaje real)</title>
+  <desc id="dd">Relé 1 en paralelo al interruptor de encendido de la impresora; relé 2 al botón rojo; fuente DC directa; USB original siempre conectado; arcade a GPIO17.</desc>
+  <style>
+    .lbl{fill:#1f2430;font-size:12px}
+    .lblb{fill:#14181f;font-size:13px;font-weight:700}
+    .sm{fill:#33404f;font-size:10.5px;font-weight:600}
+    .box{fill:#eef1f5;stroke:#9aa3b0;stroke-width:1.5}
+    .pos{stroke:#d23b3b;stroke-width:3.5;fill:none}
+    .neg{stroke:#5b6472;stroke-width:3.5;fill:none}
+    .v3{stroke:#e07c12;stroke-width:3;fill:none}
+    .sig{stroke:#2f6df0;stroke-width:3;fill:none}
+    .out{stroke:#2b313b;stroke-width:3;fill:none}
+    .usb{stroke:#6a45c8;stroke-width:5;fill:none}
+    .pin{fill:#14181f}
+  </style>
+
+  <text x="24" y="26" class="lblb" font-size="15">Conexiones finales — kiosko de tickets (montaje real, 2 relés)</text>
+
+  <!-- FUENTE DC -->
+  <rect x="360" y="44" width="140" height="58" rx="8" class="box"/>
+  <text x="430" y="68" text-anchor="middle" class="lblb">FUENTE DC</text>
+  <text x="430" y="86" text-anchor="middle" class="sm">de la impresora</text>
+  <circle cx="500" cy="64" r="4" class="pin"/><text x="508" y="68" class="sm">+</text>
+  <circle cx="500" cy="92" r="4" class="pin"/><text x="508" y="96" class="sm">−</text>
+
+  <!-- RASPBERRY PI -->
+  <rect x="50" y="250" width="175" height="330" rx="10" fill="#dcEbe1" stroke="#1f6b3b" stroke-width="1.5"/>
+  <text x="137" y="420" text-anchor="middle" class="lblb">Raspberry Pi 3B</text>
+  <circle cx="225" cy="290" r="4" class="pin"/><text x="217" y="294" text-anchor="end" class="sm">3V3</text>
+  <circle cx="225" cy="330" r="4" class="pin"/><text x="217" y="334" text-anchor="end" class="sm">GND</text>
+  <circle cx="225" cy="372" r="4" class="pin"/><text x="217" y="376" text-anchor="end" class="sm">GPIO23</text>
+  <circle cx="225" cy="470" r="4" class="pin"/><text x="217" y="474" text-anchor="end" class="sm">GPIO25</text>
+  <circle cx="225" cy="545" r="4" class="pin"/><text x="217" y="549" text-anchor="end" class="sm">GPIO17</text>
+  <rect x="95" y="244" width="44" height="9" rx="2" fill="#6a45c8"/><text x="117" y="238" text-anchor="middle" class="sm">USB</text>
+
+  <!-- RELÉ 1 -->
+  <rect x="360" y="250" width="170" height="115" rx="9" class="box"/>
+  <text x="445" y="272" text-anchor="middle" class="lblb">RELÉ 1</text>
+  <text x="445" y="288" text-anchor="middle" class="sm">interruptor · sw 3V3</text>
+  <circle cx="360" cy="312" r="4" class="pin"/><text x="368" y="316" class="sm">VCC</text>
+  <circle cx="360" cy="333" r="4" class="pin"/><text x="368" y="337" class="sm">GND</text>
+  <circle cx="360" cy="354" r="4" class="pin"/><text x="368" y="358" class="sm">IN</text>
+  <circle cx="530" cy="318" r="4" class="pin"/><text x="522" y="322" text-anchor="end" class="sm">COM</text>
+  <circle cx="530" cy="348" r="4" class="pin"/><text x="522" y="352" text-anchor="end" class="sm">NO</text>
+
+  <!-- RELÉ 2 -->
+  <rect x="360" y="430" width="170" height="115" rx="9" class="box"/>
+  <text x="445" y="452" text-anchor="middle" class="lblb">RELÉ 2</text>
+  <text x="445" y="468" text-anchor="middle" class="sm">botón rojo · sw 3V3</text>
+  <circle cx="360" cy="492" r="4" class="pin"/><text x="368" y="496" class="sm">VCC</text>
+  <circle cx="360" cy="513" r="4" class="pin"/><text x="368" y="517" class="sm">GND</text>
+  <circle cx="360" cy="534" r="4" class="pin"/><text x="368" y="538" class="sm">IN</text>
+  <circle cx="530" cy="498" r="4" class="pin"/><text x="522" y="502" text-anchor="end" class="sm">COM</text>
+  <circle cx="530" cy="528" r="4" class="pin"/><text x="522" y="532" text-anchor="end" class="sm">NO</text>
+
+  <!-- IMPRESORA -->
+  <rect x="650" y="120" width="320" height="450" rx="10" class="box"/>
+  <text x="810" y="146" text-anchor="middle" class="lblb">IMPRESORA SJ-TP01</text>
+  <!-- entradas -->
+  <circle cx="650" cy="180" r="4" class="pin"/><text x="660" y="184" class="sm">DC +</text>
+  <circle cx="650" cy="208" r="4" class="pin"/><text x="660" y="212" class="sm">DC −</text>
+  <rect x="645" y="250" width="9" height="26" rx="2" fill="#6a45c8"/><text x="660" y="267" class="sm">USB (original, con 5V)</text>
+  <!-- interruptor interno -->
+  <rect x="700" y="320" width="120" height="56" rx="6" fill="#ffffff" stroke="#9aa3b0" stroke-width="1.5"/>
+  <text x="760" y="342" text-anchor="middle" class="sm">INTERRUPTOR</text>
+  <text x="760" y="358" text-anchor="middle" class="sm">(déjalo en OFF)</text>
+  <circle cx="700" cy="334" r="3.5" class="pin"/>
+  <circle cx="700" cy="362" r="3.5" class="pin"/>
+  <!-- boton rojo interno -->
+  <circle cx="760" cy="470" r="20" fill="#d23b3b"/><text x="760" y="474" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="700">ROJO</text>
+  <text x="760" y="505" text-anchor="middle" class="sm">botón rojo (2 cables soldados)</text>
+  <circle cx="740" cy="486" r="3.5" class="pin"/>
+  <circle cx="780" cy="486" r="3.5" class="pin"/>
+
+  <!-- WIRES: fuente DC directa a impresora -->
+  <path class="pos" d="M500 64 L560 64 L560 180 L650 180"/>
+  <path class="neg" d="M500 92 L545 92 L545 208 L650 208"/>
+
+  <!-- USB Pi <-> impresora -->
+  <path class="usb" d="M117 244 L117 263 L645 263"/>
+
+  <!-- RELÉ 1 control desde Pi -->
+  <path class="v3"  d="M360 312 L300 312 L300 290 L225 290"/>
+  <path class="neg" d="M360 333 L320 333 L320 330 L225 330"/>
+  <path class="sig" d="M360 354 L290 354 L290 372 L225 372"/>
+  <!-- RELÉ 1 salida -> interruptor impresora -->
+  <path class="out" d="M530 318 L600 318 L600 334 L700 334"/>
+  <path class="out" d="M530 348 L585 348 L585 362 L700 362"/>
+
+  <!-- RELÉ 2 control desde Pi -->
+  <path class="v3"  d="M360 492 L305 492 L305 294 L221 294" opacity="0"/>
+  <path class="v3"  d="M360 492 L330 492 L330 286 L225 290"/>
+  <path class="neg" d="M360 513 L340 513 L340 334 L225 330" opacity="0"/>
+  <path class="neg" d="M360 513 L345 513 L345 332 L225 330"/>
+  <path class="sig" d="M360 534 L310 534 L310 470 L225 470"/>
+  <!-- RELÉ 2 salida -> boton rojo -->
+  <path class="out" d="M530 498 L620 498 L620 486 L740 486"/>
+  <path class="out" d="M530 528 L640 528 L640 520 L800 520 L800 486 L780 486"/>
+
+  <!-- ARCADE -->
+  <circle cx="120" cy="635" r="40" class="box"/>
+  <circle cx="120" cy="635" r="26" fill="#cfe0fb" stroke="#2f6df0" stroke-width="2"/>
+  <text x="120" y="639" text-anchor="middle" class="lblb" font-size="11">ARCADE</text>
+  <text x="120" y="690" text-anchor="middle" class="sm">visitante · sin polaridad</text>
+  <circle cx="158" cy="620" r="3.5" class="pin"/>
+  <circle cx="158" cy="650" r="3.5" class="pin"/>
+  <path class="sig" d="M158 620 L260 620 L260 545 L225 545"/>
+  <path class="neg" d="M158 650 L280 650 L280 334 L225 334 L225 330"/>
+
+  <!-- LEYENDA -->
+  <rect x="650" y="590" width="350" height="118" rx="8" class="box"/>
+  <text x="666" y="612" class="lblb" font-size="12">Leyenda y notas</text>
+  <line x1="666" y1="630" x2="696" y2="630" class="pos"/><text x="702" y="634" class="sm">+ corriente</text>
+  <line x1="800" y1="630" x2="830" y2="630" class="neg"/><text x="836" y="634" class="sm">− / GND</text>
+  <line x1="666" y1="650" x2="696" y2="650" class="v3"/><text x="702" y="654" class="sm">3V3</text>
+  <line x1="760" y1="650" x2="790" y2="650" class="sig"/><text x="796" y="654" class="sm">señal GPIO</text>
+  <line x1="666" y1="670" x2="696" y2="670" class="out"/><text x="702" y="674" class="sm">salida relé</text>
+  <line x1="760" y1="670" x2="790" y2="670" class="usb"/><text x="796" y="674" class="sm">USB (5V)</text>
+  <text x="666" y="690" class="sm">Relé 1 en PARALELO al interruptor (déjalo en OFF):</text>
+  <text x="666" y="704" class="sm">corta toda la corriente. La fuente DC va directa.</text>
+</svg>
