@@ -5,7 +5,7 @@ presses a big arcade button and a thermal printer instantly prints a branded pro
 ticket. The whole thing runs on a **Raspberry Pi 3B**, fully autonomously — staff only plug
 it in.
 
-![Sample tickets printed by the kiosk](docs/preview.png)
+![The kiosk live at Aristocrazy's pop-up stand](docs/stand.webp)
 
 > The hard part wasn't the button. The printer (**Quanzhou Shuojiang SJ-TP01**) does **not**
 > speak ESC/POS — it uses an **undocumented proprietary protocol**. I reverse-engineered it
@@ -20,6 +20,19 @@ it in.
   looping), with the position persisted to disk so it survives reboots.
 - Runs **headless and unattended**: auto-starts on boot, recovers from crashes, and ignores
   button mashing (one ticket per press).
+
+<table>
+  <tr>
+    <td width="42%" valign="top">
+      <img src="docs/kiosk.webp" alt="Close-up of the kiosk totem with the PUSH ME! arcade button" width="100%">
+      <sub>The totem at the stand — the arcade button sits on top.</sub>
+    </td>
+    <td width="58%" valign="top">
+      <img src="docs/preview.png" alt="Sample promo tickets printed by the kiosk" width="100%">
+      <sub>Sample tickets rendered and printed by the driver.</sub>
+    </td>
+  </tr>
+</table>
 
 ## The challenge
 
